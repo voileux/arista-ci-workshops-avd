@@ -120,7 +120,7 @@ port_channel_interfaces:
     enabled: true
     mode: trunk
     trunk:
-      allowed_vlan: none
+      allowed_vlan: '20'
 service_routing_protocols_model: multi-agent
 spanning_tree:
   mode: mstp
@@ -151,6 +151,9 @@ vlans:
   trunk_groups:
   - MLAG
   tenant: system
+- id: 20
+  name: Twenty
+  tenant: MY_FABRIC
 vrfs:
 - name: default
   ip_routing: false
